@@ -1,0 +1,26 @@
+@import "utilities";
+@import "config";
+
+button {
+    @include set-bg($light-color);
+    font-family: $font-stack;
+    border: 2px solid $secondary-color;
+    width:45%;
+    padding: 0.5rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    &:hover {
+        @include set-bg($secondary-color);
+        @include hover-button;
+    }
+}
+  
+input[type="checkbox"]{
+    accent-color: $secondary-color;
+    @include hover-button;
+}
+
+input[type="radio"]{
+    accent-color: $highlight;
+    @include hover-button;
+}

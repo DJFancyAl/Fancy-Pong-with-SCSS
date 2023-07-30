@@ -1,0 +1,87 @@
+:root {
+    --blue: #3245BF;
+    --blue-trans: rgba(50, 69, 191, 0.7);
+    --darkPurple: #9A5BFF;
+    --lightPurple: #E67BF7;
+    --sand: #F9E3BD;
+    --success: #36ce66;
+  }
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    line-height: 16px;
+    background-color: var(--blue);
+}
+
+header{
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    color: var(--lightPurple);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom: 3px ridge var(--lightPurple);
+}
+
+
+.control {
+    background-color: #9A5BFF;
+    text-align: center;
+    border-radius: 0  0 0.5rem 0.5rem;
+    color: var(--blue);
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.score-tab {
+    background-color: var(--sand);
+    display: inline-block;
+    padding: 1rem;
+    margin: 0.5rem;
+    width:100px;
+    border-radius: 0.5rem;
+    border: 2px solid var(--blue);
+    transition: 1s;
+}
+
+.scores {
+    font-size: 1.5rem;
+}
+
+.score {
+    padding: 0.5rem;
+}
+
+
+#mode-buttons{
+    background-color: var(--sand);
+    padding: 0.5rem;
+    margin:0.5rem;
+    border: 2px solid var(--blue);
+    border-radius: 0.5rem;
+}
+
+#two-player{
+    margin-left: 1.5rem;
+}
+#credits{
+    width: 95%;
+    text-align: right;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+#credits a{
+    color: var(--blue);
+    cursor: pointer;
+    margin-right: 1.25rem;
+}
+#credits a:hover{
+    color: var(--sand);
+}
+
+@media screen and (max-width: 1200px) {
+    .control {
+        width: 80%;
+    }
+}

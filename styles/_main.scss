@@ -1,0 +1,40 @@
+@import "config";
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    line-height: 16px;
+    background-color: $secondary-color;
+}
+
+.container {
+    width: 100%;
+    height: calc(100vh - 177px);
+    text-align: center;
+    background-size: cover;
+    
+}
+
+canvas {
+    margin: 2%;
+    border: 10px ridge $highlight;
+    background-color: $blue-trans;
+    cursor: none;
+}
+
+.material-symbols-sharp {
+    font-size: 14px;
+    position: relative;
+    top:2px
+}
+
+@media screen and (max-width: 1200px) {
+    .control {
+        width: 80%;
+    }
+}
+
+@keyframes flash-title {
+    from {text-shadow: none; transform: scale(1);}
+    to {text-shadow: 2px 0px 3px #fff; transform: scale(1.2); ;}
+}

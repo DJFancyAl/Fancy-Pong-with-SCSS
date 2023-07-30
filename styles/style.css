@@ -1,0 +1,195 @@
+body {
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  line-height: 16px;
+  background-color: #3245BF;
+}
+
+.container {
+  width: 100%;
+  height: calc(100vh - 177px);
+  text-align: center;
+  background-size: cover;
+}
+
+canvas {
+  margin: 2%;
+  border: 10px ridge #E67BF7;
+  background-color: rgba(50, 69, 191, 0.7);
+  cursor: none;
+}
+
+.material-symbols-sharp {
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+
+@media screen and (max-width: 1200px) {
+  .control {
+    width: 80%;
+  }
+}
+@keyframes flash-title {
+  from {
+    text-shadow: none;
+    transform: scale(1);
+  }
+  to {
+    text-shadow: 2px 0px 3px #fff;
+    transform: scale(1.2);
+  }
+}
+header {
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  color: #E67BF7;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-bottom: 3px ridge #E67BF7;
+}
+header h1 {
+  align-self: center;
+  animation-name: flash-title;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.control {
+  background-color: #9A5BFF;
+  color: #3245BF;
+  text-align: center;
+  border-radius: 0 0 0.5rem 0.5rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+.control .score-tab {
+  background-color: #F9E3BD;
+  color: #3245BF;
+  display: inline-block;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: 100px;
+  border-radius: 0.5rem;
+  border: 2px solid #3245BF;
+  transition: 1s;
+}
+.control .score-tab .scores {
+  font-size: 1.5rem;
+}
+.control .score-tab .score {
+  padding: 0.5rem;
+}
+.control #mode-buttons {
+  background-color: #F9E3BD;
+  color: #3245BF;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 2px solid #3245BF;
+  border-radius: 0.5rem;
+}
+.control #mode-buttons #two-player {
+  margin-left: 1.5rem;
+}
+.control #credits {
+  width: 95%;
+  text-align: right;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+.control #credits a {
+  color: #3245BF;
+  cursor: pointer;
+  margin-right: 1.25rem;
+}
+.control #credits a:hover {
+  color: #F9E3BD;
+}
+
+button {
+  background-color: #F9E3BD;
+  color: #3245BF;
+  font-family: "Orbitron", sans-serif;
+  border: 2px solid #3245BF;
+  width: 45%;
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+button:hover {
+  background-color: #3245BF;
+  color: #F9E3BD;
+  color: #F9E3BD;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  accent-color: #3245BF;
+  color: #F9E3BD;
+  cursor: pointer;
+}
+
+input[type=radio] {
+  accent-color: #E67BF7;
+  color: #F9E3BD;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: auto;
+  background-color: rgba(21, 34, 120, 0.4);
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #F9E3BD;
+  color: #3245BF;
+  margin: auto;
+  padding: 20px;
+  max-height: 90%;
+  overflow: auto;
+  border: 5px solid #9A5BFF;
+  width: 60%;
+  line-height: 1.5rem;
+  align-self: center;
+}
+.modal-content p, .modal-content li {
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.modal-content .close {
+  color: #9A5BFF;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  animation-name: flash-title;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.modal-content .close:hover, .modal-content .close:focus {
+  color: #3245BF;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-content h2 {
+  color: #E67BF7;
+  background-color: #3245BF;
+  display: inline-block;
+  padding: 1rem;
+  width: 60%;
+}
+.modal-content h3 {
+  color: #9A5BFF;
+  margin-top: 2rem;
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

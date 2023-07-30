@@ -1,0 +1,64 @@
+@import "config";
+@import "utilities";
+
+header{
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    color: $highlight;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom: 3px ridge $highlight;
+    h1 {
+        align-self: center;
+        @include flash-text;
+    }
+}
+
+.control {
+    @include set-bg($primary-color);
+    text-align: center;
+    border-radius: 0  0 0.5rem 0.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    .score-tab {
+        @include set-bg($light-color);
+        display: inline-block;
+        padding: 1rem;
+        margin: 0.5rem;
+        width:100px;
+        border-radius: 0.5rem;
+        border: 2px solid $secondary-color;
+        transition: 1s;
+        .scores {
+            font-size: 1.5rem;
+        }
+        .score {
+            padding: 0.5rem;
+        }
+    }
+    #mode-buttons {
+        @include set-bg($light-color);
+        padding: 0.5rem;
+        margin:0.5rem;
+        border: 2px solid $secondary-color;
+        border-radius: 0.5rem;
+        #two-player{
+            margin-left: 1.5rem;
+        }
+    }
+    #credits{
+        width: 95%;
+        text-align: right;
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        a {
+            color: $secondary-color;
+            cursor: pointer;
+            margin-right: 1.25rem;
+            &:hover {
+                color: $light-color;
+            }
+        }
+    }
+}

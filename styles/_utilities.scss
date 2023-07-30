@@ -1,0 +1,45 @@
+@import "config";
+
+// SCSS Function that will make sure text is light on dark backgrounds, and dark on light backgrounds.
+@function text-color-picker($color) {
+    @if($color == $dark-purple) {
+        @return $secondary-color;
+    } @else if($color == $light-color){
+        @return $secondary-color;
+    } @else {
+        @return $light-color;
+    }
+}
+
+  
+// Mixins
+@mixin set-bg($color) {
+    background-color: $color;
+    color: text-color-picker($color)
+}
+
+@mixin flash-text() {
+    animation-name: flash-title;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@mixin hover-button() {
+    color: $light-color;
+    cursor: pointer;
+}
+
+@mixin highlight() {
+    color: $highlight;
+    background-color: $secondary-color;
+    display: inline-block;
+    padding: 1rem;
+    width: 60%;
+}
+
+@mixin note() {
+    color: $primary-color;
+    margin-top: 2rem;
+    text-decoration: underline;
+}
