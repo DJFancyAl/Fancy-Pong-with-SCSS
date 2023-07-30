@@ -1,6 +1,18 @@
 @import "config";
 
 // SCSS Function that will make sure text is light on dark backgrounds, and dark on light backgrounds.
+@for $i from 1 to 101 {
+    .w-#{$i} {
+        width: calc(percentage($i) / 100);
+    }
+}
+
+@for $i from 1 to 101 {
+    .h-#{$i} {
+        height: calc(percentage($i) / 100);
+    }
+}
+
 @function text-color-picker($color) {
     @if($color == $dark-purple) {
         @return $secondary-color;
@@ -11,9 +23,33 @@
     }
 }
 
+@function calc-height($height) {
+    @if unitless($height) {
+        @warn 'Height value did not have a unit. Will convert to pixels.';
+        $height: $height * 1px;
+    }
+    @return calc(100vh - $height);
+}
+
+@function mk-border($width) {
+    @if unitless($width) {
+        @warn 'Width value did not have a unit. Will convert to pixels.';
+        $width: $width * 1px;
+    }
+    @if($width < 3px) {
+        @return $width solid $secondary-color;
+    } @else {
+        @return $width ridge $highlight;
+    }
+}
+
+
   
 // Mixins
 @mixin set-bg($color) {
+    @if type-of($color) != 'color' {
+        @error 'Background must be a color.';
+    }
     background-color: $color;
     color: text-color-picker($color)
 }

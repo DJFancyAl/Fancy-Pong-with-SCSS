@@ -1,4 +1,5 @@
 @import "config";
+@import "utilities";
 
 body {
     font-family: $font-stack;
@@ -9,15 +10,14 @@ body {
 
 .container {
     width: 100%;
-    height: calc(100vh - 177px);
+    height: calc-height(177);
     text-align: center;
     background-size: cover;
-    
 }
 
 canvas {
     margin: 2%;
-    border: 10px ridge $highlight;
+    border: mk-border(10px);
     background-color: $blue-trans;
     cursor: none;
 }

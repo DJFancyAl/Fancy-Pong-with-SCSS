@@ -8,7 +8,7 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    border-bottom: 3px ridge $highlight;
+    border-bottom: mk-border(3px);
     h1 {
         align-self: center;
         @include flash-text;
@@ -28,7 +28,7 @@ header{
         margin: 0.5rem;
         width:100px;
         border-radius: 0.5rem;
-        border: 2px solid $secondary-color;
+        border: mk-border(2px);
         transition: 1s;
         .scores {
             font-size: 1.5rem;
@@ -41,14 +41,13 @@ header{
         @include set-bg($light-color);
         padding: 0.5rem;
         margin:0.5rem;
-        border: 2px solid $secondary-color;
+        border: mk-border(2px);
         border-radius: 0.5rem;
         #two-player{
             margin-left: 1.5rem;
         }
     }
     #credits{
-        width: 95%;
         text-align: right;
         margin-top: 0.5rem;
         font-size: 0.8rem;
